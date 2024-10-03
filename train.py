@@ -1,9 +1,12 @@
+import os
 import sys
 import json
 from transformers import AutoModelForCausalLM, AutoTokenizer, Trainer, TrainingArguments
 from datasets import Dataset
 
-print("请确认你的模型文件位于当前程序工作目录下的model文件夹中（输入任意字符后回车继续）")
+print("请确认你的模型文件位于当前程序工作目录下出现的model文件夹中（输入任意字符后回车继续）")
+
+os.makedirs('model', exist_ok=True)
 
 # 暂停程序
 input()
